@@ -1,0 +1,26 @@
+[project]
+name = 'stx-raffle'
+description = 'STX Raffle with Proof of Randomness powered by Stacks blocks information'
+authors = []
+telemetry = true
+cache_dir = './.cache'
+
+[[project.requirements]]
+contract_id = 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait'
+
+[[project.requirements]]
+contract_id = 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard'
+
+[contracts.stx-raffle]
+path = 'contracts/stx-raffle.clar'
+clarity_version = 2
+epoch = 2.5
+
+[repl.analysis]
+passes = []
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = true
+trusted_caller = false
+callee_filter = false
